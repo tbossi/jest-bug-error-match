@@ -1,9 +1,9 @@
 {
-  "name": "jest-bug-data-uri-dynamic-import",
+  "name": "jest-bug-error-match",
   "version": "1.0.0",
   "description": "",
   "scripts": {
-    "test": "node node_modules/jest/packages/jest/bin/jest.js"
+    "test": "jest"
   },
   "author": "",
   "license": "ISC",
