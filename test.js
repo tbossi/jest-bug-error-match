@@ -13,11 +13,18 @@ class CustomObject {
 }
 
 describe('Error match', () => {
-    test('custom error equality', () => {
+    test('custom error strict equality', () => {
         expect(new CustomError('message1', 'value1')).toStrictEqual(new CustomError('message1', 'value1'))
         expect(new CustomError('message1', 'value1')).not.toStrictEqual(new CustomError('message2', 'value1'))
         expect(new CustomError('message1', 'value1')).not.toStrictEqual(new CustomError('message2', 'value2'))
         expect(new CustomError('message1', 'value1')).not.toStrictEqual(new CustomError('message1', 'value2')) // This fails!
+    })
+
+    test('custom error equality', () => {
+        expect(new CustomError('message1', 'value1')).toEqual(new CustomError('message1', 'value1'))
+        expect(new CustomError('message1', 'value1')).not.toEqual(new CustomError('message2', 'value1'))
+        expect(new CustomError('message1', 'value1')).not.toEqual(new CustomError('message2', 'value2'))
+        expect(new CustomError('message1', 'value1')).not.toEqual(new CustomError('message1', 'value2')) // This fails!
     })
 
     test('throw custom object extending Error', () => {
