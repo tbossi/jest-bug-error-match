@@ -1,0 +1,19 @@
+{
+  "name": "jest-bug-data-uri-dynamic-import",
+  "version": "1.0.0",
+  "description": "",
+  "scripts": {
+    "test": "node --trace-warnings --experimental-vm-modules node_modules/jest/packages/jest/bin/jest.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "jest": "^29.3.1"
+  },
+  "type": "commonjs",
+  "jest": {
+    "transform": {},
+    "resetMocks": true,
+    "resetModules": true
+  }
+}
